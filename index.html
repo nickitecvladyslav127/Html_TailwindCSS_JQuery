@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <title>Cash Payments</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Automated CashApp payment processing that leave both merchants and customers in bliss 🙏">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  </head>
+
+  <body >
+    <div id="__layout">
+      <div class="text-sm md:text-base text-gray-600">
+        <div class="bg-gray-100 min-h-screen flex items-center justify-center">
+          <div>
+            <div class="shadow-md" style="max-width: 450px;">
+              <div class="bg-green-500 p-4 rounded-t-lg">
+                <div class="flex">
+                  <h3 class="lg:text-lg tracking-wider font-medium text-white truncate flex-1">Chick Fila Full Access (Roullete)</h3> 
+                  <div class="ml-2 relative checkout-metadata__trigger">
+                    <a id="checkoutIcon" href="#" class="text-green-100 hover:text-green-800 cursor-pointer">
+                      <svg id="chechoutSVG" viewBox="0 0 20 20" fill="currentColor" class="dots-vertical w-6 h-6">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                      </svg>
+                    </a> 
+                    <div id="checkoutTooltip" class="rounded-lg origin-top-right absolute right-0 mt-2 w-64 shadow-lg z-10">
+                      <div class="bg-white rounded-lg shadow-xs">
+                        <div>
+                          <div class="flex px-2 bg-gray-600 rounded-t-lg py-2">
+                            <div title="Chick Fila Full Access (Roullete)" class="w-1/2">
+                              <div class="text-sm text-gray-400 px-2">
+                                Product Name
+                              </div> 
+                              <div class="px-2 truncate font-medium text-gray-200">
+                                Chick Fila Full Access (Roullete)
+                              </div>
+                            </div> 
+                            <div title="$2.50" class="w-1/2">
+                              <div class="text-sm text-gray-400 px-2">
+                                Price
+                              </div> 
+                              <div class="px-2 font-medium text-gray-200">
+                                $2.50
+                              </div>
+                            </div>
+                          </div> 
+                          <div title="V2KFI61R5L" class="py-2">
+                            <div class="text-sm text-gray-500 px-4">
+                              Note
+                            </div> 
+                            <div class="px-4 truncate font-mono">
+                              V2KFI61R5L
+                            </div>
+                          </div>
+                          <div title="6qMEbTqZcQyPXXrv3" class="py-2">
+                            <div class="text-sm text-gray-500 px-4">
+                              Order ID
+                            </div> 
+                            <div class="px-4 truncate font-mono">
+                              6qMEbTqZcQyPXXrv3
+                            </div>
+                          </div>
+                          <div title="US" class="py-2">
+                            <div class="text-sm text-gray-500 px-4">
+                              Country Code
+                            </div> 
+                            <div class="px-4 truncate font-mono">
+                              US
+                            </div>
+                          </div> 
+                          <div class="py-2">
+                            <div class="px-4 truncate text-xs">
+                              2021-04-01T00:50:04.086Z
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="bg-white p-8 rounded-lg" style="max-width: 450px;"> 
+                <div>
+                  <div>
+                    <div class="mb-4">
+                      <div>
+                        <div class="flex justify-center mb-4">
+                          <a href="https://cash.app/$onymous911?qr=1" target="_blank" class="bg-white shadow-md rounded-lg p-4">
+                            <img src="https://api.cash-payments.io/cash-code/$onymous911" height="200" width="200" alt="$CashCode">
+                          </a>
+                        </div> 
+                        <a href="https://cash.app/$onymous911" target="_blank" class="text-center block -mt-2 lg:hidden">
+                          <span class="rounded-lg text-gray-600 font-medium px-6 py-1 text-sm transition-colors">Tap to Pay</span>
+                        </a> 
+                        <a href="https://cash.app/$onymous911" target="_blank" class="mb-4 block">
+                          <h2 class="text-2xl text-gray-700 font-medium text-center">$onymous911</h2>
+                        </a>
+                        <p class="leading-6 md:leading-8 text-gray-500 text-center my-4">
+                          Please include "
+                          <span class="font-medium tracking-widest text-green-500">V2KFI61R5L</span>" in your payment message.
+                          This way we can process your order automatically.
+                        </p>
+                      </div>
+                    </div> 
+                    <div class="mb-4">
+                      <div>
+                        <div>
+                          <label for="note" class="block text-sm leading-5 font-medium text-gray-700">Payment for</label> 
+                          <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                              <span class="text-gray-500 sm:text-sm sm:leading-5">
+                                #
+                              </span>
+                            </div> 
+                            <input id="note" placeholder="..." readonly="readonly" class="form-input font-medium block w-full pl-7 pr-12 sm:text-sm sm:leading-5 tracking-widest"> 
+                            <div class="absolute inset-y-0 right-0 flex items-center">
+                              <a href="#" class="text-green-500 sm:text-sm sm:leading-5 px-2 font-medium underline">
+                                COPY
+                              </a>
+                            </div>
+                          </div> 
+                          <p class="text-xs text-gray-500 mt-1">The same green code you see above. Including the '#' is optional.</p>
+                        </div>
+                      </div>
+                    </div> 
+                    <div>
+                      <div>
+                        <label for="price" class="block text-sm leading-5 font-medium text-gray-700">Amount to send</label> 
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span class="text-gray-500 sm:text-sm sm:leading-5">
+                              $
+                            </span>
+                          </div> 
+                          <input id="price" placeholder="0.00" readonly="readonly" class="form-input font-medium block w-full pl-7 pr-12 sm:text-sm sm:leading-5 tracking-wide"> 
+                          <div class="absolute inset-y-0 right-0 flex items-center">
+                            <span aria-label="currency" class="text-gray-500 sm:text-sm sm:leading-5 px-2">
+                              USD
+                            </span>
+                          </div>
+                        </div> <!---->
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="mt-6 -mx-8 text-center flex items-center bg-gray-50 -mb-8 rounded-b-xl p-4 px-8 justify-between">
+                    <div class="text-gray-500 font-medium text-xs md:text-sm">
+                      Waiting for payment...
+                    </div> 
+                    <div>
+                      <img class="loadingIcon" alt='loadingIcon' src="./loadingIcon.png">
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div> 
+            <div class="mt-4">
+              <div class="flex justify-between items-center px-2">
+                <span class="text-sm">Copyright © Cash-Payments.io</span> 
+                <div>
+                  <a href="https://dynasty.atshop.io/order/6qMEbTqZcQyPXXrv3/cancelled" class="font-medium underline text-sm">Cancel Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $( "#checkoutIcon" ).click(function() {
+          $( "#checkoutTooltip" ).toggle( "fast" );
+      });
+      $("body").click(function(e) {
+          if (($( ".checkout-metadata__trigger" ).has( e.target ).length === 0)) {
+            $( "#checkoutTooltip" ).hide( "fast" );
+          };
+      })
+    </script>    
+  </body>
+</html>
